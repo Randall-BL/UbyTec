@@ -1,0 +1,89 @@
+<div class="gestionC-container">
+  <h2>Gestión de Afiliados</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="cedula">Número de Cédula Jurídica: <span class="asterisco">*</span></label>
+        <input type="text" id="cedula" name="cedula" [(ngModel)]="cedula" (input)="formatearCedula()" maxlength="11" required placeholder="3-2345-6789">
+
+        <label for="nombre">Nombre del comercio: <span class="asterisco">*</span></label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Ej: KFC">
+
+        <label for="tipo">Tipo de comercio: <span class="asterisco">*</span></label>
+        <!-- Selector de tipos de comercio -->
+        <select id="tipo" name="tipo" [(ngModel)]="tipo" required>
+          <option *ngFor="let tipo of tiposComercio" [value]="tipo">{{ tipo }}</option>
+        </select>
+
+        <h5>Dirección</h5>
+
+        <label for="provincia">Provincia: <span class="asterisco">*</span></label>
+        <select id="provincia" name="provincia" [(ngModel)]="provincia" required>
+          <option value="San José">San José</option>
+          <option value="alajuela">Alajuela</option>
+          <option value="cartago">Cartago</option>
+          <option value="heredia">Heredia</option>
+          <option value="guanacaste">Guanacaste</option>
+          <option value="puntarenas">Puntarenas </option>
+          <option value="limon">Limón</option>
+        </select>
+
+        <label for="canton">Cantón: <span class="asterisco">*</span></label>
+        <input id="canton" name="canton" type="text" [(ngModel)]="canton" required placeholder="Ej: Santa Ana">
+      </div>
+
+      <div class="form-right">
+
+        <label for="distrito">Distrito: <span class="asterisco">*</span></label>
+        <input id="distrito" name="distrito" type="text" [(ngModel)]="distrito" required placeholder="Ej: Pozos">
+
+        <div class="telefono-container">
+          <label>Teléfono (s): <span class="asterisco">*</span></label>
+
+          <label for="telefono{{1}}">Teléfono {{1}}:</label>
+          <input type="text" id="telefono1" [(ngModel)]="telefonos[0]" name="telefono1" (input)="formatearTelefono(0)" maxlength="9" required placeholder="8554-1232">
+
+          <div *ngIf="telefonos.length > 1">
+            <label for="telefono{{2}}">Teléfono {{2}}:</label>
+            <input type="text" id="telefono2" [(ngModel)]="telefonos[1]" name="telefono2" (input)="formatearTelefono(1)" maxlength="9" required placeholder="8554-1232">
+          </div>
+
+          <div *ngIf="telefonos.length > 2">
+            <label for="telefono{{3}}">Teléfono {{3}}:</label>
+            <input type="text" id="telefono3" [(ngModel)]="telefonos[2]" name="telefono3" (input)="formatearTelefono(2)" maxlength="9" required placeholder="8554-1232">
+          </div>
+
+          <div class="button-group">
+            <button type="button" (click)="removerTelefono()">-</button>
+            <button type="button" (click)="agregarTelefono()">+</button>
+          </div>
+        </div>
+
+        <label for="email">Correo: <span class="asterisco">*</span></label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required placeholder="Ej: example@gmail.com">
+
+        <label for="sinpe">Número de SINPE móvil: <span class="asterisco">*</span></label>
+        <input id="sinpe" name="sinpe" type="text" [(ngModel)]="sinpe" (input)="formatearTelefonoSinpe()" maxlength="9"  required placeholder="Ej: 8888-8888">
+
+        <label for="admin">Administrador del comercio: <span class="asterisco">*</span></label>
+        <select id="admin" name="admin" [(ngModel)]="admin" required>
+          <option *ngFor="let nombre of nombresAdministradores" [value]="nombre">{{ nombre }}</option>
+        </select>
+
+      </div>
+    </div>
+
+    <!-- Contenedor para los botones -->
+    <div class="botones-container">
+      <button type="submit">Registrar</button>
+      <button (click)="eliminar()" class="boton-volver" >Eliminar</button>
+    </div>
+
+  </form>
+
+  <button (click)="backTobienvenida()" class="boton-volver" >Volver</button>
+</div>

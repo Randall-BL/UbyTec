@@ -1,0 +1,60 @@
+<div class="gestionN-container">
+  <h2>Gestión de Negocio</h2>
+  <form (ngSubmit)="modificarNegocio()">
+
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="cedula">Número de Cédula Jurídica: <span class="asterisco">*</span></label>
+        <input type="text" id="cedula" name="cedula" [(ngModel)]="cedula" readonly maxlength="11" required>
+
+        <label for="nombre">Nombre del comercio: <span class="asterisco">*</span></label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Ej: KFC">
+
+        <label for="tipo">Tipo de Comercio: <span class="asterisco">*</span></label>
+        <select id="tipo" name="tipo" [(ngModel)]="tipo" required>
+          <option *ngFor="let tipoComercio of tiposComercio" [value]="tipoComercio">{{ tipoComercio }}</option>
+        </select>
+
+        <h5>Dirección</h5>
+
+        <label for="provincia">Provincia: <span class="asterisco">*</span></label>
+        <select id="provincia" name="provincia" [(ngModel)]="provincia" required>
+          <option value="sj">San José</option>
+          <option value="alajuela">Alajuela</option>
+          <option value="cartago">Cartago</option>
+          <option value="heredia">Heredia</option>
+          <option value="guanacaste">Guanacaste</option>
+          <option value="puntarenas">Puntarenas</option>
+          <option value="limon">Limón</option>
+        </select>
+
+        <label for="canton">Cantón: <span class="asterisco">*</span></label>
+        <input id="canton" name="canton" type="text" [(ngModel)]="canton" required placeholder="Ej: Santa Ana">
+      </div>
+
+      <div class="form-right">
+
+        <label for="distrito">Distrito: <span class="asterisco">*</span></label>
+        <input id="distrito" name="distrito" type="text" [(ngModel)]="distrito" required placeholder="Ej: Pozos">
+
+        <label for="email">Correo: <span class="asterisco">*</span></label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required placeholder="Ej: example@gmail.com">
+
+        <label for="sinpe">Número de SINPE móvil: <span class="asterisco">*</span></label>
+        <input id="sinpe" name="sinpe" type="text" [(ngModel)]="sinpe" (input)="formatearTelefonoSinpe()" maxlength="9" required placeholder="Ej: 8888-8888">
+
+      </div>
+    </div>
+
+    <!-- Contenedor para los botones -->
+    <div class="botones-container">
+      <button type="submit" class="btn-modificar">Modificar Negocio</button>
+    </div>
+
+  </form>
+
+  <button (click)="backTobienvenida()" class="boton-volver">Volver</button>
+</div>

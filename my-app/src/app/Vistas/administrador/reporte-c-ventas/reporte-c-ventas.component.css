@@ -1,0 +1,61 @@
+.reporteC-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100vh;
+}
+
+h2{
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: flex; /* Flex para alinear los gráficos */
+  justify-content: space-between; /* Espaciado entre gráficos */
+  margin-top: 20px; /* Margen superior para centrar mejor el contenido */
+}
+
+.card {
+  flex: 1; /* Cada tarjeta ocupa un espacio igual */
+  margin: 0 10px; /* Margen horizontal entre tarjetas */
+}
+
+.canvas {
+  height: 200px; /* Ajusta el tamaño del canvas si es necesario */
+}
+
+button {
+  display: block; /* Asegura que el botón se comporte como un bloque */
+  margin: 15px auto; /* Centra el botón horizontalmente */
+  width: 15%;
+  padding: 10px;
+  background-color: #e07a5f; /* Naranja Sahara */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Suaviza la transición de color */
+}
+
+button:hover {
+  background-color: #c06044; /* Naranja Sahara más oscuro */
+}

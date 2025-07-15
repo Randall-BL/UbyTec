@@ -1,0 +1,20 @@
+<div class="productos-container">
+  <h2>Eliminación Productos</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="nombre">Nombre del producto: <span class="asterisco">*</span></label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Ej: Whopper Tejano">
+
+      </div>
+    </div>
+    <button type="submit">Eliminar</button>
+  </form>
+
+  <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+</div>

@@ -1,0 +1,37 @@
+.pedido-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.pedido-item h4 {
+  margin: 0;
+}
+
+.pedido-item p {
+  margin: 5px 0;
+}
+
+.pedido-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pedido-item li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

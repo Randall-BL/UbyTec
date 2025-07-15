@@ -1,0 +1,43 @@
+<div class="administracionA-container">
+  <h4>Administración de afiliaciones</h4>
+
+  <!-- Mensaje para errores generales (problemas de conexión, errores inesperados, etc.) -->
+  <div *ngIf="mensajeErrorGeneral" class="mensaje-error-general">
+    <p>{{ mensajeErrorGeneral }}</p>
+  </div>
+
+  <!-- Mensaje cuando no hay solicitudes -->
+  <div *ngIf="noHaySolicitudes && !mensajeErrorGeneral" class="no-solicitudes">
+    <p>No hay solicitudes por el momento.</p>
+  </div>
+
+  <!-- Lista de negocios con solicitudes pendientes -->
+  <div *ngIf="!noHaySolicitudes && !mensajeErrorGeneral" class="negocios-container">
+    <div *ngFor="let negocio of negocios" class="producto-card">
+      <div class="info-negocio">
+        <p><strong>Nombre:</strong> {{ negocio.nombreComercio }}</p>
+        <p><strong>Cédula Jurídica:</strong> {{ negocio.numeroCedulaJuridica }}</p>
+        <p><strong>Tipo de Comercio:</strong> {{ negocio.tipoComercio }}</p>
+        <p><strong>Correo Electrónico:</strong> {{ negocio.correoElectronico }}</p>
+      </div>
+
+      <div class="botones-container">
+        <button (click)="aceptarAfiliacion(negocio.numeroCedulaJuridica)">Aceptar</button>
+        <button class="btn-rechazar" (click)="mostrarFormularioRechazo(negocio.numeroCedulaJuridica)">Rechazar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de rechazo para todos los negocios -->
+  <div *ngIf="mostrarModalRechazo" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarFormularioRechazo()">&times;</span>
+      <h4>Rechazar Solicitud de Afiliación</h4>
+      <textarea [(ngModel)]="comentarioRechazo" placeholder="Escribe el motivo del rechazo"></textarea>
+      <div class="modal-buttons">
+        <button (click)="rechazarAfiliacion()" class="btn-rechazar">Confirmar Rechazo</button>
+        <button (click)="cerrarFormularioRechazo()" class="btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

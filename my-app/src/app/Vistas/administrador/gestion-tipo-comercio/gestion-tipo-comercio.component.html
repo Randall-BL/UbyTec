@@ -1,0 +1,24 @@
+<div class="gestionT-container">
+  <h2>Gestión Tipo de Comercio</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="tipo">Tipo de Comercio: <span class="asterisco">*</span></label>
+        <input type="tipo" id="tipo" name="tipo" [(ngModel)]="tipo" required placeholder="Ej: Restaurante">
+
+      </div>
+    </div>
+    <!-- Contenedor para los botones -->
+    <div class="botones-container">
+      <button type="submit">Registrar</button>
+      <button (click)="eliminar()" class="boton-volver" >Eliminar</button>
+    </div>
+  </form>
+
+  <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+</div>

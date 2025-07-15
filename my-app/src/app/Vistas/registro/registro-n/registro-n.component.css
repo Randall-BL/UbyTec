@@ -1,0 +1,126 @@
+.registro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #f4c8a3, #f29e7c); /* Gradiente en tonos naranja sahara */
+  height: 100vh; /* Se ajusta la altura al tamaño de la ventana del navegador */
+}
+
+form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-left, .form-right {
+  width: 48%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.telefonos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los inputs de teléfono */
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* Centra los botones en el contenedor */
+  gap: 20px; /* Espacio entre los botones "+" y "-" */
+  margin-top: 10px; /* Espacio entre los botones y el último campo de teléfono */
+}
+
+.telefonos-container button {
+  width: 40px; /* Ajusta el ancho del botón */
+  height: 40px; /* Ajusta la altura del botón */
+  background-color: #e76f51;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  flex-grow: 1;
+  margin-right: 5px; /* Espacio entre el input y el botón */
+}
+
+.password-container button {
+  width: 20%;
+  margin-left: 5px;
+  padding: 5px;
+  background-color: #e76f51; /* Naranja sahara para el botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  background-color: #e07a5f; /* Fondo naranja sobrio */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  width: 30%; /* Reduce el tamaño del botón Registrarse */
+  padding: 8px;
+  font-size: 18px;
+}
+
+.boton-volver {
+  width: 15%; /* Reduce el tamaño del botón Volver */
+  background-color: #e76f51; /* Naranja sahara sobrio */
+  font-size: 18px;
+}
+
+.asterisco {
+  color: red;
+}
+
+.campo-requerido-texto {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 20px;
+}

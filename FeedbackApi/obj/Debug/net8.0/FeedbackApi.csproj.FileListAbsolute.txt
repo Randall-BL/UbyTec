@@ -1,0 +1,80 @@
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\appsettings.Development.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\appsettings.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.exe
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.deps.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.runtimeconfig.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.pdb
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.csproj.AssemblyReference.cache
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.AssemblyInfoInputs.cache
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.AssemblyInfo.cs
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.csproj.CoreCompileInputs.cache
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.MvcApplicationPartsAssemblyInfo.cs
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.sourcelink.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets.build.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets.development.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.FeedbackApi.Microsoft.AspNetCore.StaticWebAssets.props
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.build.FeedbackApi.props
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FeedbackApi.props
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FeedbackApi.props
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets.pack.json
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\scopedcss\bundle\FeedbackApi.styles.css
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\Feedback.7D4E101F.Up2Date
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\refint\FeedbackApi.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.pdb
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.genruntimeconfig.cache
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\obj\Debug\net8.0\ref\FeedbackApi.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\DnsClient.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\MongoDB.Bson.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\MongoDB.Driver.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\SharpCompress.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\Snappier.dll
+c:\Users\YITAN\OneDrive\Escritorio\Basesv2\UbyTec\FeedbackApi\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\appsettings.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.exe
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.deps.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.runtimeconfig.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\FeedbackApi.pdb
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\DnsClient.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\Snappier.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.csproj.AssemblyReference.cache
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.AssemblyInfoInputs.cache
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.AssemblyInfo.cs
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.csproj.CoreCompileInputs.cache
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.sourcelink.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.FeedbackApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.build.FeedbackApi.props
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FeedbackApi.props
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FeedbackApi.props
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\scopedcss\bundle\FeedbackApi.styles.css
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\Feedback.7D4E101F.Up2Date
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\refint\FeedbackApi.dll
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.pdb
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\FeedbackApi.genruntimeconfig.cache
+C:\Users\l\OneDrive - Estudiantes ITCR\Documentos\GitHub\UbyTec\FeedbackApi\obj\Debug\net8.0\ref\FeedbackApi.dll

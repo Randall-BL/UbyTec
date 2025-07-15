@@ -1,0 +1,51 @@
+.container-fluid {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: linear-gradient(to right, #f4c8a3, #f29e7c); /* Gradiente en tonos naranja sahara */
+  background-size: cover;
+  height: 100vh; /* Se ajusta la altura al tamaño de la ventana del navegador */
+}
+
+.bienvenida-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center; /* Centra el texto */
+  margin-top: 125px;
+  margin-bottom: 3px;
+  color: black; /* Cambiar color del texto a blanco */
+}
+
+h3 {
+  text-align: center; /* Centra el texto */
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: black; /* Cambiar color del texto a blanco */
+}
+
+.bienvenida-content label {
+  margin-bottom: 20px; /* Mayor separación entre el texto y los botones */
+  color: black; /* Cambiar color del texto a blanco */
+}
+
+.bienvenida-content div {
+  margin-bottom: 15px; /* Espacio entre los grupos de radio buttons */
+  margin-top: 15px; /* Espacio entre los grupos de radio buttons */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los botones de radio y los textos */
+}
+
+button {
+  width: 150px;
+  margin-top: 15px; /* Espacio entre botones */
+}

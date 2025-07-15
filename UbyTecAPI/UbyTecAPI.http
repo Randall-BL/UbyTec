@@ -1,0 +1,6 @@
+@UbyTecAPI_HostAddress = http://localhost:5219
+
+GET {{UbyTecAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

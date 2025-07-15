@@ -1,0 +1,37 @@
+<div class="pedido-container">
+  <div *ngIf="pedidos.length > 0; else noPedidos">
+    <div *ngFor="let pedido of pedidos" class="pedido-item">
+      <h4>Pedido #{{ pedido.detalleID }}</h4>
+      <p>Cliente ID: {{ pedido.clienteID }}</p>
+      <p>Estado: <strong>{{ pedido.estado }}</strong></p>
+      <p><strong>Total:</strong> ₡{{ calcularTotal(pedido) }}</p>
+
+      <h5>Productos:</h5>
+      <ul>
+        <li *ngFor="let producto of pedido.productos">
+          Producto ID: {{ producto.productoID }} - Cantidad: {{ producto.cantidad }} - Precio: ₡{{ producto.precio }}
+        </li>
+      </ul>
+
+      <button *ngIf="pedido.estado !== 'Completado'" (click)="marcarComoCompletado(pedido)">
+        Marcar como Completado
+      </button>
+    </div>
+
+    <!-- Modal de rechazo para todos los negocios -->
+    <div *ngIf="mostrarModalRechazo" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="cerrarFormularioRechazo()">&times;</span>
+        <h4>Agregar un Comentario para el Último Pedido</h4>
+        <textarea [(ngModel)]="comentario" placeholder="Escribe el feedback para su pedido"></textarea>
+        <button (click)="enviarComentario()" class="comentario-btn">
+          Enviar Comentario
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noPedidos>
+    <h4>No tienes pedidos activos.</h4>
+  </ng-template>
+</div>

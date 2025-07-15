@@ -1,0 +1,38 @@
+<div class="report-container">
+  <h2>Reporte de Historial de Pedidos</h2>
+
+  <div *ngIf="pedidos.length > 0; else noPedidos">
+    <table class="report-table">
+      <thead>
+      <tr>
+        <th>Pedido ID</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Monto Producto</th>
+        <th>Total</th>
+        <th>Nombre del cliente</th>
+        <th>Repartidor</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let pedido of pedidos">
+        <td>{{ pedido.pedidoID }}</td>
+        <td>{{ pedido.nombreProducto }}</td>
+        <td>{{ pedido.cantidadProducto }}</td>
+        <td>₡{{ pedido.montoProducto }}</td>
+        <td>₡{{ pedido.total }}</td>
+        <td>{{ pedido.nombreCliente }}</td>
+        <td>{{ pedido.nombreRepartidor }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="total">
+      <h3>Total de Ventas: ₡{{ totalVentas }}</h3>
+    </div>
+  </div>
+
+  <ng-template #noPedidos>
+    <p>No se encontraron pedidos para este cliente.</p>
+  </ng-template>
+</div>

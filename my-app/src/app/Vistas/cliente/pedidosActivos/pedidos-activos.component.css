@@ -1,0 +1,115 @@
+pedidos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #f4c8a3, #f29e7c); /* Gradiente en tonos naranja sahara */
+  height: 100vh;
+}
+
+.pedido-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.pedido-item h4 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.pedido-item p {
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+.modal {
+  display: flex; /* Cambiar a flexbox */
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+  align-items: center; /* Centra el modal verticalmente */
+  justify-content: center; /* Centra el modal horizontalmente */
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px; /* Asegura que el modal no sea demasiado ancho */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para destacar el modal */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #e07a5f; /* Resaltar el borde cuando está enfocado */
+  box-shadow: 0px 0px 5px rgba(224, 122, 95, 0.5);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-buttons button {
+  width: 48%; /* Asegurar que los botones tengan el mismo tamaño */
+}

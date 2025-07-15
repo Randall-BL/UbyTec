@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <aside id="sidebar">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button" (click)="toggleSidebar()">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a>Menu</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a routerLink="gestion-perfil" class="sidebar-link">
+          <i class="bi bi-person-check"></i>
+          <span>Gestion Perfil</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="pedidos-activos" class="sidebar-link">
+          <i class="bi bi-list-check"></i>
+          <span>Pedidos Activos</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="general-c" class="sidebar-link">
+          <i class="bi bi-h-square"></i>
+          <span>Principal</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="tienda" class="sidebar-link">
+          <i class="bi bi-cart"></i>
+          <span>Tienda en línea</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="reporte-historial" class="sidebar-link">
+          <i class="bi bi-archive"></i>
+          <span>Reporte Historial</span>
+        </a>
+      </li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="#" class="sidebar-link">
+        <i class="bi bi-box-arrow-left"></i>
+        <span>Salir</span>
+      </a>
+    </div>
+  </aside>
+  <div class="main p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

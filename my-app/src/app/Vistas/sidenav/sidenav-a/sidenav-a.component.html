@@ -1,0 +1,71 @@
+<div class="wrapper">
+  <aside id="sidebar">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button" (click)="toggleSidebar()">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a>Menu</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a routerLink="administracion-afiliaciones" class="sidebar-link">
+          <i class="bi bi-plus-circle"></i>
+          <span>Administración de Afiliaciones</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="gestion-admin" class="sidebar-link">
+          <i class="bi bi-person-check-fill"></i>
+          <span>Gestión Administradores</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="gestion-afiliados" class="sidebar-link">
+          <i class="bi bi-shop"></i>
+          <span>Gestión Afiliados</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="gestion-repartidores" class="sidebar-link">
+          <i class="bi bi-bicycle"></i>
+          <span>Gestión Repartidores</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="gestion-tipo" class="sidebar-link">
+          <i class="bi bi-apple"></i>
+          <span>Gestión Tipo de Comercio</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="general-a" class="sidebar-link">
+          <i class="bi bi-h-square"></i>
+          <span>Principal</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="reportes-c-ventas" class="sidebar-link">
+          <i class="bi bi-check-all"></i>
+          <span>Reporte Ventas</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="reportes-ventas-afiliado" class="sidebar-link">
+          <i class="bi bi-file-bar-graph-fill"></i>
+          <span>Reporte por Afiliado</span>
+        </a>
+      </li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="#" class="sidebar-link">
+        <i class="bi bi-box-arrow-left"></i>
+        <span>Salir</span>
+      </a>
+    </div>
+  </aside>
+  <div class="main p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

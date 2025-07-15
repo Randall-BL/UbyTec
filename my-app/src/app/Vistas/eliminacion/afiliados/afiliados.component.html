@@ -1,0 +1,20 @@
+<div class="afiliados-container">
+  <h2>Eliminación Comercios Afiliados</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="cedula">Número de Cédula Jurídica: <span class="asterisco">*</span></label>
+        <input type="text" id="cedula" name="cedula" [(ngModel)]="cedula" (input)="formatearCedula()" maxlength="11" required placeholder="3-2345-6789">
+
+      </div>
+    </div>
+    <button type="submit">Eliminar</button>
+  </form>
+
+  <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+</div>

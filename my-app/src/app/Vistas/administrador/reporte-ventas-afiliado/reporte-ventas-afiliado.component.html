@@ -1,0 +1,70 @@
+<div class="reportesV-container">
+
+  <h2>Reporte General de Ventas</h2>
+
+  <!-- Mostrar los reportes en tabla -->
+  <div *ngIf="reportes.length > 0; else noReportes" class="reportes">
+    <div *ngFor="let reporte of reportes">
+      <h3>{{ reporte[0].nombreComercio }} - Total de Ventas</h3>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Monto Producto</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pedido of reporte">
+          <td>{{ pedido.nombreCliente }}</td>
+          <td>{{ pedido.nombreProducto }}</td>
+          <td>{{ pedido.cantidadProducto }}</td>
+          <td>₡{{ pedido.montoProducto | number: '1.0-0' }}</td>
+          <td>₡{{ pedido.total | number: '1.0-0' }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- Calcular el monto total de ventas por afiliado -->
+      <div class="totales">
+        <p><strong>Total de Ventas:</strong> ₡{{ calcularTotalVentas(reporte) | number: '1.0-0' }}</p>
+        <p><strong>Total a Pagar a UbyTec (5%):</strong> ₡{{ calcularMontoUbyTec(reporte) | number: '1.0-0' }}</p>
+      </div>
+    </div>
+    <!-- Gráficos -->
+    <div class="container">
+      <!-- Gráfico 1 -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Total de compras por cliente</h6>
+        </div>
+        <div class="card-body">
+          <canvas id="myBarChart"></canvas> <!-- Cambiar a gráfico de barras -->
+        </div>
+      </div>
+
+      <!-- Gráfico 2 -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Total de ventas por Negocio</h6>
+        </div>
+        <div class="card-body">
+          <div class="chart-pie pt-4 pb-2">
+            <canvas id="myPieChart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="boton-container">
+      <button (click)="exportarPDF()">Exportar a PDF</button>
+      <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+    </div>
+
+  </div>
+
+<ng-template #noReportes>
+  <p>No hay reportes disponibles.</p>
+</ng-template>

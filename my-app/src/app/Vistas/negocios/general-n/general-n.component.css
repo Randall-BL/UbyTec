@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  background: linear-gradient(to right, #f4c8a3, #f29e7c); /* Gradiente en tonos naranja sahara */
+}
+
+.content h1 {
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2em;
+}

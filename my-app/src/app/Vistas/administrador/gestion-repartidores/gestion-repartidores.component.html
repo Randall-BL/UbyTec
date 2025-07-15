@@ -1,0 +1,81 @@
+<div class="gestionR-container">
+  <h2>Gestión de Repartidores</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="nombre">Nombre: <span class="asterisco">*</span></label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Ej: Juan Diego">
+
+        <label for="apellido1">Primer Apellido: <span class="asterisco">*</span></label>
+        <input type="text" id="apellido1" name="apellido1" [(ngModel)]="apellido1" required placeholder="Ej: Pérez">
+
+        <label for="apellido2">Segundo Apellido: <span class="asterisco">*</span></label>
+        <input type="text" id="apellido2" name="apellido2" [(ngModel)]="apellido2" required placeholder="Ej: Soto">
+
+        <h5>Dirección</h5>
+
+        <label for="provincia">Provincia: <span class="asterisco">*</span></label>
+        <select id="provincia" name="provincia" [(ngModel)]="provincia" required>
+          <option value="sj">San José</option>
+          <option value="alajuela">Alajuela</option>
+          <option value="cartago">Cartago</option>
+          <option value="heredia">Heredia</option>
+          <option value="guanacaste">Guanacaste</option>
+          <option value="puntarenas">Puntarenas </option>
+          <option value="limon">Limón</option>
+        </select>
+
+        <label for="canton">Cantón: <span class="asterisco">*</span></label>
+        <input id="canton" name="canton" type="text" [(ngModel)]="canton" required placeholder="Ej: Santa Ana">
+
+      </div>
+
+      <div class="form-right">
+
+        <label for="distrito">Distrito: <span class="asterisco">*</span></label>
+        <input id="distrito" name="distrito" type="text" [(ngModel)]="distrito" required placeholder="Ej: Pozos">
+
+        <div class="telefono-container">
+          <label>Teléfono (s): <span class="asterisco">*</span></label>
+
+          <label for="telefono{{1}}">Teléfono {{1}}:</label>
+          <input type="text" id="telefono1" [(ngModel)]="telefonos[0]" name="telefono1" (input)="formatearTelefono(0)" maxlength="9" required placeholder="8554-1232">
+
+          <div *ngIf="telefonos.length > 1">
+            <label for="telefono{{2}}">Teléfono {{2}}:</label>
+            <input type="text" id="telefono2" [(ngModel)]="telefonos[1]" name="telefono2" (input)="formatearTelefono(1)" maxlength="9" required placeholder="8554-1232">
+          </div>
+
+          <div *ngIf="telefonos.length > 2">
+            <label for="telefono{{3}}">Teléfono {{3}}:</label>
+            <input type="text" id="telefono3" [(ngModel)]="telefonos[2]" name="telefono3" (input)="formatearTelefono(2)" maxlength="9" required placeholder="8554-1232">
+          </div>
+
+          <div class="button-group">
+            <button type="button" (click)="removerTelefono()">-</button>
+            <button type="button" (click)="agregarTelefono()">+</button>
+          </div>
+        </div>
+
+        <label for="email">Correo: <span class="asterisco">*</span></label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required placeholder="juandiperez@dominio.com">
+
+        <label for="usuario">Usuario: <span class="asterisco">*</span></label>
+        <input type="usuario" id="usuario" name="usuario" [(ngModel)]="usuario" required placeholder="Ej: PedroP12">
+      </div>
+    </div>
+
+    <!-- Contenedor para los botones -->
+    <div class="botones-container">
+      <button type="submit">Registrar</button>
+      <button (click)="eliminar()" class="boton-volver" >Eliminar</button>
+    </div>
+
+  </form>
+
+  <button (click)="backToAdmin()" class="boton-volver" >Volver</button>
+</div>

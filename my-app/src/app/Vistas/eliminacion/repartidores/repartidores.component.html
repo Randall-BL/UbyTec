@@ -1,0 +1,20 @@
+<div class="repartidores-container">
+  <h2>Eliminación Repartidores</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="usuario">Usuario: <span class="asterisco">*</span></label>
+        <input type="usuario" id="usuario" name="usuario" [(ngModel)]="usuario" required placeholder="Ej: PedroP12">
+
+      </div>
+    </div>
+    <button type="submit">Eliminar</button>
+  </form>
+
+  <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+</div>

@@ -1,0 +1,52 @@
+<div class="gestionP-container">
+  <h2>Gestión de Perfil</h2>
+  <form (ngSubmit)="modificarInfo()">
+
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+
+      <label for="cedula">Número de Cédula: <span class="asterisco">*</span></label>
+      <!-- Campo de cédula: máximo 9 caracteres numéricos -->
+      <input type="text" id="cedula" name="cedula" [(ngModel)]="cedula"  readonly maxlength="11" required placeholder="1-2345-6789">
+
+      <label for="nombre">Nombre: <span class="asterisco">*</span></label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Ej: Juan Diego">
+
+      <label for="apellido1">Primer Apellido: <span class="asterisco">*</span></label>
+      <input type="text" id="apellido1" name="apellido1" [(ngModel)]="apellido1" required placeholder="Ej: Pérez">
+
+      <label for="apellido2">Segundo Apellido: <span class="asterisco">*</span></label>
+      <input type="text" id="apellido2" name="apellido2" [(ngModel)]="apellido2" required placeholder="Ej: Soto">
+
+      <h5>Dirección</h5>
+
+      <label for="provincia">Provincia: <span class="asterisco">*</span></label>
+      <!-- Selector de provincias -->
+      <select id="provincia" name="provincia" [(ngModel)]="provincia" required>
+        <option value="San José">San José</option>
+        <option value="Alajuela">Alajuela</option>
+        <option value="Cartago">Cartago</option>
+        <option value="Heredia">Heredia</option>
+        <option value="Guanacaste">Guanacaste</option>
+        <option value="Puntarenas">Puntarenas </option>
+        <option value="Limón">Limón</option>
+      </select>
+
+      <label for="canton">Cantón: <span class="asterisco">*</span></label>
+      <input id="canton" name="canton" type="text" [(ngModel)]="canton" required placeholder="Ej: Santa Ana">
+
+      <label for="distrito">Distrito: <span class="asterisco">*</span></label>
+      <input id="distrito" name="distrito" type="text" [(ngModel)]="distrito" required placeholder="Ej: Pozos">
+    </div>
+
+    <!-- Contenedor para los botones -->
+    <div class="botones-container">
+      <button type="submit" class="btn-modificar">Modificar Cliente</button>
+      <button type="button" (click)="eliminar()" class="btn-eliminar">Eliminar Cliente</button>
+    </div>
+
+  </form>
+
+  <button (click)="backTobienvenida()" class="boton-volver">Volver</button>
+</div>

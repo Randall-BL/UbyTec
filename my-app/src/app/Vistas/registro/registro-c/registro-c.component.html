@@ -1,0 +1,93 @@
+<div class="registro-container">
+  <h2>Registro para Cliente</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="cedula">Número de Cédula: <span class="asterisco">*</span></label>
+        <!-- Campo de cédula: máximo 9 caracteres numéricos -->
+        <input type="text" id="cedula" name="cedula" [(ngModel)]="cedula" (input)="formatearCedula()" maxlength="11" required placeholder="1-2345-6789">
+
+        <label for="nombre">Nombre: <span class="asterisco">*</span></label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Ej: Juan Diego">
+
+        <label for="apellido1">Primer Apellido: <span class="asterisco">*</span></label>
+        <input type="text" id="apellido1" name="apellido1" [(ngModel)]="apellido1" required placeholder="Ej: Pérez">
+
+        <label for="apellido2">Segundo Apellido: <span class="asterisco">*</span></label>
+        <input type="text" id="apellido2" name="apellido2" [(ngModel)]="apellido2" required placeholder="Ej: Soto">
+
+        <h5>Dirección</h5>
+
+        <label for="provincia">Provincia: <span class="asterisco">*</span></label>
+        <!-- Selector de provincias -->
+        <select id="provincia" name="provincia" [(ngModel)]="provincia" required>
+          <option value="San José">San José</option>
+          <option value="alajuela">Alajuela</option>
+          <option value="cartago">Cartago</option>
+          <option value="heredia">Heredia</option>
+          <option value="guanacaste">Guanacaste</option>
+          <option value="puntarenas">Puntarenas </option>
+          <option value="limon">Limón</option>
+        </select>
+
+        <label for="canton">Cantón: <span class="asterisco">*</span></label>
+        <input id="canton" name="canton" type="text" [(ngModel)]="canton" required placeholder="Ej: Santa Ana">
+      </div>
+
+      <div class="form-right">
+
+        <label for="distrito">Distrito: <span class="asterisco">*</span></label>
+        <input id="distrito" name="distrito" type="text" [(ngModel)]="distrito" required placeholder="Ej: Pozos">
+
+        <label for="fechaNacimiento">Fecha de Nacimiento: <span class="asterisco">*</span></label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="fechaNacimiento" (change)="calcularEdad()" required>
+
+        <label for="edad">Edad: <span class="asterisco">*</span></label>
+        <input type="number" id="edad" name="edad" [(ngModel)]="edad" required placeholder="La edad se autocompleta al ingresar la fecha de nacimiento" readonly>
+
+        <label for="telefono">Teléfono: <span class="asterisco">*</span></label>
+        <!-- Campo de teléfono: máximo 8 caracteres numéricos -->
+        <input type="text" id="telefono" name="telefono" [(ngModel)]="telefono" (input)="formatearTelefono()" maxlength="9" required placeholder="8554-1232">
+
+        <label for="usuario">Usuario: <span class="asterisco">*</span></label>
+        <input type="usuario" id="usuario" name="usuario" [(ngModel)]="usuario" required placeholder="Juandiperez">
+
+        <label for="password">Contraseña: <span class="asterisco">*</span></label>
+        <div class="password-container">
+          <!-- Campo de cédula: máximo 9 caracteres numéricos -->
+          <input type="password" id="password" name="password" [(ngModel)]="password" minlength="8" maxlength="16" required placeholder="Ingrese su contraseña">
+          <button type="button" (click)="alternarVisibilidadpassword()">👁️</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para las condiciones de la contraseña -->
+    <div class="modal" *ngIf="mostrarModal">
+      <div class="modal-content">
+        <span class="close" (click)="cerrarModal()">&times;</span>
+        <h3>Condiciones para la Contraseña</h3>
+        <p>La contraseña debe cumplir con los siguientes requisitos:</p>
+        <ul>
+          <li>Mínimo una letra mayúscula</li>
+          <li>Mínimo cuatro letras minúsculas</li>
+          <li>Mínimo tres dígitos numéricos</li>
+          <li>Debe tener entre 8 y 16 caracteres</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contenedor para los botones -->
+    <div class="botones-container">
+      <button type="submit">Registrarse</button>
+      <button type="button" (click)="mostrarCondiciones()">Condiciones para la Contraseña</button>
+    </div>
+
+  </form>
+
+  <button (click)="backTobienvenida()" class="boton-volver" >Volver</button>
+</div>

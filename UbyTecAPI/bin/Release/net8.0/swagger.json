@@ -1,0 +1,2688 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "UbyTecAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Administradores": {
+      "get": {
+        "tags": [
+          "Administradores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Administrador"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Administradores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Administrador"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Administrador"
+            }
+          }
+        }
+      }
+    },
+    "/api/Administradores/{id}": {
+      "get": {
+        "tags": [
+          "Administradores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Administrador"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Administradores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Administrador"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Administradores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Administradores/modificarPorNumeroCedula/{numeroCedula}": {
+      "put": {
+        "tags": [
+          "Administradores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedula",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Administrador"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Administradores/buscarPorNumeroCedula/{numeroCedula}": {
+      "get": {
+        "tags": [
+          "Administradores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedula",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Administrador"
+            }
+          }
+        }
+      }
+    },
+    "/api/Administradores/{id}/telefonos": {
+      "get": {
+        "tags": [
+          "Administradores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TelefonoAdministrador"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Administradores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TelefonoAdministrador"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Administradores/telefonos/{telefonoId}": {
+      "delete": {
+        "tags": [
+          "Administradores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "telefonoId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Administradores/eliminarPorNumeroCedula/{numeroCedula}": {
+      "delete": {
+        "tags": [
+          "Administradores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedula",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Administradores/nombres-completos": {
+      "get": {
+        "tags": [
+          "Administradores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Afiliado"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Afiliados"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/{id}": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Afiliados"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Afiliados"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/iniciarSesion": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "correoElectronico",
+            "type": "string",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "type": "string",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/{id}/telefonos": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TelefonoAfiliado"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Afiliados"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TelefonoAfiliado"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/telefonos/{telefonoId}": {
+      "delete": {
+        "tags": [
+          "Afiliados"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "telefonoId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/buscarPorCedulaJuridica/{numeroCedulaJuridica}": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedulaJuridica",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/modificarPorCedulaJuridica/{numeroCedulaJuridica}": {
+      "put": {
+        "tags": [
+          "Afiliados"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedulaJuridica",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/buscarPorNombreComercio/{nombreComercio}": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombreComercio",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Afiliado"
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/productosPorUbicacion": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "provincia",
+            "type": "string",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "canton",
+            "type": "string",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "distrito",
+            "type": "string",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": { }
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/{afiliadoID}/productos": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "afiliadoID",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/estado/{estado}": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "estado",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": { }
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/aceptar/{numeroCedulaJuridica}": {
+      "put": {
+        "tags": [
+          "Afiliados"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedulaJuridica",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/rechazar/{numeroCedulaJuridica}": {
+      "put": {
+        "tags": [
+          "Afiliados"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedulaJuridica",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Afiliados/estadoVacio": {
+      "get": {
+        "tags": [
+          "Afiliados"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": { }
+            }
+          }
+        }
+      }
+    },
+    "/api/Afiliados/eliminarPorCedulaJuridica/{numeroCedulaJuridica}": {
+      "delete": {
+        "tags": [
+          "Afiliados"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedulaJuridica",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Clientes": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Cliente"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Clientes"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        }
+      }
+    },
+    "/api/Clientes/{id}": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Clientes"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Clientes/byusername/{usuario}": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "usuario",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        }
+      }
+    },
+    "/api/Clientes/bycedula/{numeroCedula}": {
+      "put": {
+        "tags": [
+          "Clientes"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedula",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateClienteDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "numeroCedula",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/DetallesPedido": {
+      "get": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetallePedido"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DetallePedido"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/DetallePedido"
+            }
+          }
+        }
+      }
+    },
+    "/api/DetallesPedido/{id}": {
+      "get": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/DetallePedido"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DetallePedido"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/DetallesPedido/porCliente/{clienteId}": {
+      "get": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "clienteId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetallePedido"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DetallesPedido/porAfiliado/{afiliadoId}": {
+      "get": {
+        "tags": [
+          "DetallesPedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "afiliadoId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetallePedido"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EstadoRepartidor": {
+      "get": {
+        "tags": [
+          "EstadoRepartidor"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EstadoRepartidor"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EstadoRepartidor"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/EstadoRepartidor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/EstadoRepartidor"
+            }
+          }
+        }
+      }
+    },
+    "/api/EstadoRepartidor/{id}": {
+      "get": {
+        "tags": [
+          "EstadoRepartidor"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/EstadoRepartidor"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EstadoRepartidor"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/EstadoRepartidor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EstadoRepartidor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Pedido": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Pedido"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pedido"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Pedido"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Pedido"
+            }
+          }
+        }
+      }
+    },
+    "/api/Pedido/{id}": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Pedido"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pedido"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Pedido"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pedido"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Pedido/moverVentasCompletadas": {
+      "post": {
+        "tags": [
+          "Pedido"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Pedido/cliente/{clienteId}": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "clienteId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Pedido"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pedido/afiliado/{afiliadoId}": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "afiliadoId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Pedido"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pedido/ventasGenerales": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": { }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pedido/porAfiliado": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Pedido"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Productos": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Producto"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Productos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Productos/{id}": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Productos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Productos/buscarPorNombre": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nombreProducto",
+            "type": "string",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Productos/afiliado/{afiliadoID}/nombre/{nombreProducto}": {
+      "put": {
+        "tags": [
+          "Productos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "afiliadoID",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "nombreProducto",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Productos/buscarPorAfiliadoYNombre": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "afiliadoID",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "nombreProducto",
+            "type": "string",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Repartidores": {
+      "get": {
+        "tags": [
+          "Repartidores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Repartidor"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Repartidores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Repartidor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Repartidor"
+            }
+          }
+        }
+      }
+    },
+    "/api/Repartidores/{id}": {
+      "get": {
+        "tags": [
+          "Repartidores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Repartidor"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Repartidores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Repartidor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Repartidores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Repartidores/buscarPorUsuario/{usuario}": {
+      "get": {
+        "tags": [
+          "Repartidores"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "usuario",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Repartidor"
+            }
+          }
+        }
+      }
+    },
+    "/api/Repartidores/modificarPorUsuario/{usuario}": {
+      "put": {
+        "tags": [
+          "Repartidores"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "usuario",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Repartidor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Repartidores/eliminarPorUsuario/{usuario}": {
+      "delete": {
+        "tags": [
+          "Repartidores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "usuario",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TiposComercio": {
+      "get": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoComercio"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TipoComercio"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TipoComercio"
+            }
+          }
+        }
+      }
+    },
+    "/api/TiposComercio/nombres": {
+      "get": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TiposComercio/{id}": {
+      "get": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TipoComercio"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TipoComercio"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TiposComercio/eliminarPorNombre/{nombre}": {
+      "delete": {
+        "tags": [
+          "TiposComercio"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Administrador": {
+      "type": "object",
+      "properties": {
+        "administradorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "numeroCedula": {
+          "type": "string"
+        },
+        "nombreCompleto": {
+          "type": "string"
+        },
+        "direccionProvincia": {
+          "type": "string"
+        },
+        "direccionCanton": {
+          "type": "string"
+        },
+        "direccionDistrito": {
+          "type": "string"
+        },
+        "usuario": {
+          "type": "string"
+        },
+        "passwordHash": {
+          "type": "string"
+        },
+        "telefonos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TelefonoAdministrador"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Afiliado": {
+      "type": "object",
+      "properties": {
+        "afiliadoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "numeroCedulaJuridica": {
+          "type": "string"
+        },
+        "nombreComercio": {
+          "type": "string"
+        },
+        "tipoComercio": {
+          "type": "string"
+        },
+        "direccionProvincia": {
+          "type": "string"
+        },
+        "direccionCanton": {
+          "type": "string"
+        },
+        "direccionDistrito": {
+          "type": "string"
+        },
+        "correoElectronico": {
+          "type": "string"
+        },
+        "numeroSINPE": {
+          "type": "string"
+        },
+        "administrador": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "telefonos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TelefonoAfiliado"
+          }
+        },
+        "productos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Producto"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Cliente": {
+      "type": "object",
+      "properties": {
+        "clienteID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "numeroCedula": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellidos": {
+          "type": "string"
+        },
+        "direccionProvincia": {
+          "type": "string"
+        },
+        "direccionCanton": {
+          "type": "string"
+        },
+        "direccionDistrito": {
+          "type": "string"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "usuario": {
+          "type": "string"
+        },
+        "passwordHash": {
+          "format": "byte",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DetallePedido": {
+      "required": [
+        "afiliadoID",
+        "clienteID",
+        "estado"
+      ],
+      "type": "object",
+      "properties": {
+        "detalleID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "afiliadoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "clienteID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "repartidorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "productos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductoDetalle"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "EstadoRepartidor": {
+      "type": "object",
+      "properties": {
+        "estadoRepartidorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "repartidorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "disponible": {
+          "type": "boolean"
+        },
+        "repartidor": {
+          "$ref": "#/definitions/Repartidor"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Pedido": {
+      "type": "object",
+      "properties": {
+        "pedidoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "clienteID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "afiliadoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "repartidorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cantidadProducto": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreProducto": {
+          "type": "string"
+        },
+        "montoProducto": {
+          "format": "double",
+          "type": "number"
+        },
+        "total": {
+          "format": "double",
+          "type": "number"
+        },
+        "nombreCliente": {
+          "type": "string"
+        },
+        "nombreComercio": {
+          "type": "string"
+        },
+        "nombreRepartidor": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Producto": {
+      "type": "object",
+      "properties": {
+        "productoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "afiliadoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreProducto": {
+          "type": "string"
+        },
+        "categoria": {
+          "type": "string"
+        },
+        "foto": {
+          "type": "string"
+        },
+        "precio": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ProductoDetalle": {
+      "required": [
+        "cantidad",
+        "detallePedidoID",
+        "precio",
+        "productoID"
+      ],
+      "type": "object",
+      "properties": {
+        "productoDetalleID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "detallePedidoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cantidad": {
+          "format": "int32",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "precio": {
+          "format": "double",
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Repartidor": {
+      "type": "object",
+      "properties": {
+        "repartidorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreCompleto": {
+          "type": "string"
+        },
+        "direccionProvincia": {
+          "type": "string"
+        },
+        "direccionCanton": {
+          "type": "string"
+        },
+        "direccionDistrito": {
+          "type": "string"
+        },
+        "correoElectronico": {
+          "type": "string"
+        },
+        "usuario": {
+          "type": "string"
+        },
+        "passwordHash": {
+          "type": "string"
+        },
+        "telefonos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TelefonoRepartidor"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "TelefonoAdministrador": {
+      "type": "object",
+      "properties": {
+        "telefonoAdministradorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "numero": {
+          "type": "string"
+        },
+        "administradorID": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TelefonoAfiliado": {
+      "type": "object",
+      "properties": {
+        "telefonoAfiliadoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "afiliadoID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "numeroTelefono": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TelefonoRepartidor": {
+      "type": "object",
+      "properties": {
+        "telefonoRepartidorID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "numero": {
+          "type": "string"
+        },
+        "repartidorID": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TipoComercio": {
+      "type": "object",
+      "properties": {
+        "tipoComercioID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreTipo": {
+          "type": "string"
+        },
+        "afiliados": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Afiliado"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateClienteDto": {
+      "type": "object",
+      "properties": {
+        "numeroCedula": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellidos": {
+          "type": "string"
+        },
+        "direccionProvincia": {
+          "type": "string"
+        },
+        "direccionCanton": {
+          "type": "string"
+        },
+        "direccionDistrito": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="inicio-container">
+  <h2>Inicio de Sesión para Negocios Afiliados</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <label for="email">Correo: <span class="asterisco">*</span></label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required placeholder="juandiperez@dominio.com">
+
+      <label for="password">Contraseña: <span class="asterisco">*</span></label>
+      <div class="password-container">
+        <input type="password" id="password" name="password" [(ngModel)]="password" required placeholder="Ingrese su contraseña">
+        <button type="button" (click)="alternarVisibilidadpassword()">👁️</button>
+      </div>
+    </div>
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+
+  <button (click)="backTobienvenida()" class="boton-volver" >Volver</button>
+</div>
+

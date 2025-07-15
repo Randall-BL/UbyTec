@@ -1,0 +1,61 @@
+<div class="reportesC-container">
+
+  <h2>Reporte General de Ventas</h2>
+
+  <div *ngIf="reportes.length > 0; else noReportes">
+    <!-- Tabla -->
+    <table class="report-table">
+      <thead>
+      <tr>
+        <th>Cliente</th>
+        <th>Comercio</th>
+        <th>Repartidor</th>
+        <th>Total Compras</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let reporte of reportes">
+        <td>{{ reporte.nombreCliente }}</td>
+        <td>{{ reporte.nombreComercio }}</td>
+        <td>{{ reporte.nombreRepartidor }}</td>
+        <td>₡{{ reporte.totalCompras | number: '1.2-2' }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <!-- Gráficos -->
+    <div class="container">
+      <!-- Gráfico 1 -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Total de compras por cliente</h6>
+        </div>
+        <div class="card-body">
+          <canvas id="myBarChart"></canvas> <!-- Cambiar a gráfico de barras -->
+        </div>
+      </div>
+
+      <!-- Gráfico 2 -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Total de ventas por Negocio</h6>
+        </div>
+        <div class="card-body">
+          <div class="chart-pie pt-4 pb-2">
+            <canvas id="myPieChart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="boton-container">
+    <button (click)="exportarPDF()">Exportar a PDF</button>
+    <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+  </div>
+
+</div>
+
+<ng-template #noReportes>
+  <p>No hay reportes disponibles.</p>
+</ng-template>

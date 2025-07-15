@@ -1,0 +1,33 @@
+<div *ngIf="pedidos.length > 0; else noPedidos">
+  <h2>Pedidos Activos</h2>
+  <div *ngFor="let pedido of pedidos" class="pedido-item">
+    <h4>Pedido #{{ pedido.detalleID }}</h4>
+    <p>ID Cliente: {{ pedido.clienteID }}</p>
+    <p>Estado: {{ pedido.estado }}</p>
+
+    <h5>Productos:</h5>
+    <ul>
+      <li *ngFor="let producto of pedido.productos">
+        ID Producto: {{ producto.productoID }} - Cantidad: {{ producto.cantidad }} - Precio: ₡{{ producto.precio }}
+      </li>
+    </ul>
+
+    <button
+      *ngIf="pedido.estado === 'Recibido'"
+      (click)="marcarEnProceso(pedido)"
+    >
+      Marcar como En proceso
+    </button>
+
+    <button
+      *ngIf="pedido.estado === 'En proceso'"
+      (click)="completarPedido(pedido)"
+    >
+      Completar Pedido
+    </button>
+  </div>
+</div>
+
+<ng-template #noPedidos>
+  <p>No hay pedidos disponibles.</p>
+</ng-template>

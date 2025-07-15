@@ -1,0 +1,23 @@
+<div class="tipo-container">
+  <h2>Eliminación de Tipo de comercio</h2>
+  <form (ngSubmit)="Enviar()">
+
+    <!-- Indicador de campos requeridos -->
+    <p class="campo-requerido-texto">* Campo requerido</p>
+
+    <div class="form-container">
+      <div class="form-left">
+
+        <label for="tipo">Tipo de comercio: <span class="asterisco">*</span></label>
+        <!-- Selector de tipos de comercio -->
+        <select id="tipo" name="tipo" [(ngModel)]="tipo" required>
+          <option *ngFor="let tipo of tiposComercio" [value]="tipo">{{ tipo }}</option>
+        </select>
+
+      </div>
+    </div>
+    <button type="submit">Eliminar</button>
+  </form>
+
+  <button (click)="backToAdmin()" class="boton-volver">Volver</button>
+</div>

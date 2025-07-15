@@ -1,0 +1,47 @@
+<div class = "container-fluid position-absolute">
+  <div class = "bienvenida-content">
+    <h1>¡Bienvenido a UbyTEC!</h1>
+
+    <!--Selección del tipo de usuario para el registro-->
+    <div>
+      <h3>¿Es tu primera vez en la aplicación? Selecciona tu rol y el botón Registrarme.</h3>
+      <div>
+
+        <input type="radio" id="tipoR1" name="tipoUsuarioR" value="1"
+               [checked]="tipoUsuarioR === '1'"
+               (click)="selectTipoUsuarioR( '1')"
+        />
+        <label for="tipoR1">Cliente</label>
+
+        <input type="radio" id="tipoR3" name="tipoUsuarioR" value="3"
+               [checked]="tipoUsuarioR === '3'"
+               (click)="selectTipoUsuarioR( '3')"
+        />
+        <label for="tipoR1">Negocio</label>
+
+        <button (click)="navigateToregistro()">Registrarme</button>
+
+        <!--Selección del tipo de usuario para el inicio de sesión-->
+
+        <h3>Si ya tienes una cuenta, selecciona tu rol e inicia sesión.</h3>
+
+        <input type="radio" id="tipo2" name="tipoUsuario" value="2"
+               [checked]="tipoUsuario === '2'"
+               (click)="selectTipoUsuario( '2')">
+        <label for="tipo2">Administrador</label>
+
+        <input type="radio" id="tipo1" name="tipoUsuario" value="1"
+               [checked]="tipoUsuario === '1'"
+               (click)="selectTipoUsuario( '1')"/>
+        <label for="tipo1">Cliente</label>
+
+        <input type="radio" id="tipo3" name="tipoUsuario" value="3"
+               [checked]="tipoUsuario === '3'"
+               (click)="selectTipoUsuario( '3')">
+        <label for="tipo3">Negocio</label>
+
+        <button (click)="navigateToinicio()">Iniciar Sesión</button>
+      </div>
+    </div>
+  </div>
+</div>

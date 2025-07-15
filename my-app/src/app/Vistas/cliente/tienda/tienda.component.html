@@ -1,0 +1,25 @@
+<div class="tienda-container">
+  <h2>Tienda en línea</h2>
+  <button class="carrito-boton">
+    <li class="sidebar-item">
+      <a routerLink="/carrito" class="sidebar-link">
+        <i class="bi bi-cart"></i>
+        <span>Carrito</span>
+      </a>
+    </li>
+  </button>
+  <div *ngIf="negocios.length === 0">
+    <h5>No se encontraron negocios en tu ubicación con productos disponibles.</h5>
+  </div>
+  <div class="productos-container">
+    <div *ngFor="let negocio of negocios" class="producto-card">
+      <p><strong>Nombre del Comercio:</strong> {{ negocio.Nombre }}</p>
+      <p><strong>Provincia:</strong> {{ negocio.Provincia }}</p>
+      <p><strong>Cantón:</strong> {{ negocio.Canton }}</p>
+      <p><strong>Distrito:</strong> {{ negocio.Distrito }}</p>
+      <p><strong>Teléfono 1:</strong> {{ negocio.Telefono1 }}</p> <!-- Aquí usas Telefono1 -->
+      <button (click)="verDetallesNegocio(negocio.id)">Entrar</button>
+    </div>
+  </div>
+</div>
+

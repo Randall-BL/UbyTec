@@ -1,0 +1,92 @@
+<div class="carrito-container">
+  <h2>Carrito de Compras</h2>
+
+  <div *ngIf="carritoVacio(); else conProductos" class="carrito-vacio">
+    <p class="no-productos">No hay productos en el carrito.</p>
+    <button (click)="backToTienda()" class="boton-volver-vacio">Volver a la tienda</button>
+  </div>
+
+  <ng-template #conProductos>
+    <table class="tabla-carrito">
+      <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Categoría</th>
+        <th>Precio Unitario</th>
+        <th>Cantidad</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let producto of productosCarrito">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.categoria }}</td>
+        <td>₡{{ producto.precio }}</td>
+        <td>
+          <input
+            type="number"
+            [(ngModel)]="producto.cantidad"
+            (change)="actualizarCantidad(producto)"
+            min="0"
+          />
+        </td>
+        <td>₡{{ calcularTotal(producto) }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <hr>
+    <h5><strong>Precio SubTotal:</strong> ₡{{ obtenerPrecioSubTotal() }}</h5>
+    <h5><strong>Tarifa del Servicio: 5%</strong></h5>
+    <h5><strong>Precio Final Total:</strong> ₡{{ obtenerPrecioFinal() }}</h5>
+
+    <div class="botones-container">
+      <button (click)="agregarMasArticulos()" class="boton-agregar">Agregar más artículos</button>
+      <button (click)="abrirModalTarjeta()" [disabled]="carritoVacio()" class="boton-realizar-pedido">Realizar Pedido</button>
+      <button (click)="backToTienda()" class="boton-volver">Cancelar Pedido</button>
+    </div>
+
+    <!-- Modal para los datos de la tarjeta de crédito -->
+    <div *ngIf="mostrarModalTarjeta" class="modal">
+      <div class="modal-content">
+        <h2>Información de Pago</h2>
+        <form #formPago="ngForm">
+          <label for="numeroTarjeta">Número de Tarjeta:</label>
+          <input
+            type="text"
+            id="numeroTarjeta"
+            name="numeroTarjeta"
+            [(ngModel)]="numeroTarjeta"
+            required
+            (input)="formatearNumeroTarjeta()"
+            maxlength="19"
+            placeholder="1234 5678 9012 3456" />
+
+          <label for="fechaExpiracion">Fecha de Expiración (MM/AAAA):</label>
+          <input
+            type="text"
+            id="fechaExpiracion"
+            name="fechaExpiracion"
+            [(ngModel)]="fechaExpiracion"
+            (input)="formatearFechaExpiracion()"
+            maxlength="7"
+            placeholder="MM/AAAA"
+            required />
+
+          <label for="cvv">CVV:</label>
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            [(ngModel)]="cvv"
+            required
+            maxlength="3"
+            placeholder="123" />
+
+          <button type="button" (click)="confirmarPedido()">Confirmar</button>
+          <button type="button" (click)="cerrarModalTarjeta()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,18 @@
+<div class="negocioD-container">
+  <h2>Productos de {{ nombreComercio }}</h2>
+  <div *ngIf="productos.length === 0">
+    <p>No se encontraron productos para este negocio.</p>
+  </div>
+  <div class="productos-container">
+    <div *ngFor="let producto of productos" class="producto-card">
+      <h3>{{ producto.nombre }}</h3>
+      <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+      <p><strong>Precio:</strong> ₡{{ producto.precio }}</p>
+      <button (click)="anadirAlCarrito(producto)">Añadir al carrito</button>
+    </div>
+  </div>
+  <!-- Botón Volver -->
+  <div class="volver-container">
+    <button (click)="volverATienda()">Volver</button>
+  </div>
+</div>
